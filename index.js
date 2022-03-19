@@ -1,10 +1,10 @@
 // Import stylesheets
 import './style.css';
 
-// Usate questa per qualche prova, poi create un vostro account
-// su www.openweathermap.org e create una API key personale
-const apiKey = 'd0475be3a1967b1b49dfc02c8128001a';
-const leCitta = ['Genova', 'Milano', 'Torino', 'Roma'];
+//modificata api key con quella personale
+const apiKey = 'e6f38b0049fc0177522baf2baa00026f';
+//aggiunta Lucca
+const leCitta = ['Genova', 'Milano', 'Torino', 'Roma', 'Lucca'];
 const URL =
   'https://api.openweathermap.org/data/2.5/weather?APPID=' +
   apiKey +
