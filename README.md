@@ -1,3 +1,3 @@
-# js-3mvwx2
+Aggiungere alla lista delle città nell'esercizio "temperature" una nuova città.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-3mvwx2)
+Completare l'esercizio su stackblitz e nella consegna indicare il link.
