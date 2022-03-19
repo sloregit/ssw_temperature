@@ -1,3 +1,3 @@
-Aggiungere alla lista delle città nell'esercizio "temperature" una nuova città.
+Definire dei callback che alterino lo stile di un tasto al passaggio del mouse
 
-Completare l'esercizio su stackblitz e nella consegna indicare il link.
+Completare l'esercizio su stackblitz e nella consegna indicare il link

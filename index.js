@@ -3,7 +3,7 @@ import './style.css';
 
 //modificata api key con quella personale
 const apiKey = 'e6f38b0049fc0177522baf2baa00026f';
-//aggiunta Lucca
+//Es.1 aggiunta Lucca
 const leCitta = ['Genova', 'Milano', 'Torino', 'Roma', 'Lucca'];
 const URL =
   'https://api.openweathermap.org/data/2.5/weather?APPID=' +
@@ -14,6 +14,15 @@ leCitta.map((citta) => {
   const btn = document.createElement('button');
   btn.innerHTML = citta;
   btn.addEventListener('click', () => display(btn.innerHTML));
+
+  //Es.2 aggiunti callback per cambiare colore al pulsante
+  btn.addEventListener('mouseenter', function () {
+    this.style.backgroundColor = 'lightblue';
+  });
+  btn.addEventListener('mouseleave', function () {
+    this.style.backgroundColor = 'inherit';
+  });
+  //
   const item = document.createElement('li');
   item.appendChild(btn);
   document.getElementById('citta').appendChild(item);
