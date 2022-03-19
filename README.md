@@ -1,3 +1,3 @@
-Definire dei callback che alterino lo stile di un tasto al passaggio del mouse
+Visualizzare, oltre alla temperatura, anche la pressione
 
 Completare l'esercizio su stackblitz e nella consegna indicare il link

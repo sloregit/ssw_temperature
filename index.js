@@ -37,11 +37,17 @@ function display(c) {
       var dataObject = JSON.parse(request.response);
       document.getElementById('risposta').innerHTML =
         new Date().toISOString() +
-        ': A ' +
+        '</br>' +
+        'A ' +
         c +
         ' ci sono ' +
         dataObject.main.temp +
-        ' gradi';
+        ' gradi' +
+        //Es.3 Aggiunta la pressione (in hPa, Openweather)
+        '</br>' +
+        'La pressione è di: ' +
+        dataObject.main.pressure +
+        ' hPa';
     } else {
       document.getElementById('risposta').innerText = 'Errore';
     }
