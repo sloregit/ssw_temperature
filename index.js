@@ -28,27 +28,30 @@ leCitta.map((citta) => {
   item.appendChild(btn);
   document.getElementById('citta').appendChild(item);
 });
-var media = [];
+
 function calcolaMediaTemp() {
-  leCitta.map((città, i) => {
+  let media = 0;
+  let i = 1; // utilizzato perché l'index di .map restituisce l'indice dell'array
+  leCitta.map((città, j) => {
     const tempRequest = new XMLHttpRequest();
     tempRequest.onload = () => {
       if (tempRequest.status === 200) {
         var dataObject = JSON.parse(tempRequest.response);
-
-        return media.push(dataObject.main.temp);
+        media = media + dataObject.main.temp;
+        console.log('indice .map: ' + j);
+        i === leCitta.length
+          ? (risposta.innerHTML =
+              'le media delle temperature è: ' + media / leCitta.length)
+          : i++;
       } else {
         console.log(tempRequest.status);
         risposta.innerText = 'Errore';
       }
     };
-
     tempRequest.open('GET', URL + città, true);
     tempRequest.send();
   });
-  risposta.innerHTML = media;
 }
-console.log(media);
 
 // Funzione collegata ai bottoni
 function display(c) {
