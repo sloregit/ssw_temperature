@@ -11,6 +11,7 @@ const URL =
   '&units=metric&q=';
 
 const risposta = document.getElementById('risposta');
+//Tasto per il calcolo della media Es.4
 const buttonMedia = document.getElementById('media');
 buttonMedia.addEventListener('click', calcolaMediaTemp);
 
@@ -29,6 +30,7 @@ leCitta.map((citta) => {
   document.getElementById('citta').appendChild(item);
 });
 
+//Es.4 calcolo della media
 function calcolaMediaTemp() {
   let media = 0;
   let i = 1; // utilizzato perché l'indice di .map non è lineare(vedi j in console log)
