@@ -31,14 +31,14 @@ leCitta.map((citta) => {
 
 function calcolaMediaTemp() {
   let media = 0;
-  let i = 1; // utilizzato perché l'index di .map restituisce l'indice dell'array
+  let i = 1; // utilizzato perché l'indice di .map non è lineare(vedi j in console log)
   leCitta.map((città, j) => {
     const tempRequest = new XMLHttpRequest();
     tempRequest.onload = () => {
       if (tempRequest.status === 200) {
         var dataObject = JSON.parse(tempRequest.response);
         media = media + dataObject.main.temp;
-        console.log('indice .map: ' + j);
+        console.log('indice j .map: ' + j);
         i === leCitta.length
           ? (risposta.innerHTML =
               'le media delle temperature è: ' + media / leCitta.length)
